@@ -1,15 +1,15 @@
-describe('Sapper template app', () => {
+describe('milo.works', () => {
 	beforeEach(() => {
 		cy.visit('/')
 	});
 
 	it('has the correct <h1>', () => {
-		cy.contains('h1', 'Great success!')
+		cy.contains('h1', 'Milo Zheng')
 	});
 
 	it('navigates to /about', () => {
-		cy.get('nav a').contains('about').click();
-		cy.url().should('include', '/about');
+		cy.get('nav a').contains('contact').click();
+		cy.url().should('include', '/contact');
 	});
 
 	it('navigates to /projects', () => {
