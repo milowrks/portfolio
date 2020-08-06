@@ -51,11 +51,11 @@
 }
 
 :root {
-  --bgColor: hsl(0, 0%, 100%); /* #FFF */
-  --textColor: hsl(0, 0%, 56%); /* #8E8E8E */
-  --textDarkerColor: hsl(0, 0%, 36%); /* #5B5B5B */
-  --textLighterColor: hsl(0, 0%, 79%); /* C9C9C9 */
-  --contrastColor: hsl(0, 0%, 20%); /* #343434 */
+  --globalBgColor: hsl(0, 0%, 100%); /* #FFF */
+  --globalTextColor: hsl(0, 0%, 56%); /* #8E8E8E */
+  --globalTextDarkerColor: hsl(0, 0%, 36%); /* #5B5B5B */
+  --globalTextLighterColor: hsl(0, 0%, 79%); /* C9C9C9 */
+  --globalContrastColor: hsl(0, 0%, 20%); /* #343434 */
 }
 
 body {
@@ -65,7 +65,7 @@ body {
   font-size: 14px;
   line-height: 1.5;
   color: #8e8e8e;
-  color: var(--textColor);
+  color: var(--globalTextColor);
 }
 
 h1,
@@ -88,16 +88,16 @@ h1 {
 
 a {
   color: #5b5b5b;
-  color: var(--textDarkerColor);
+  color: var(--globalTextDarkerColor);
 }
 
 code {
   font-family: menlo, inconsolata, monospace;
   font-size: calc(1em - 2px);
   color: #c9c9c9;
-  color: var(--textLighterColor);
+  color: var(--globalTextLighterColor);
   background-color: #343434;
-  background-color: var(--contrastColor);
+  background-color: var(--globalContrastColor);
   padding: 0.2em 0.4em;
   border-radius: 2px;
 }
