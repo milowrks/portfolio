@@ -51,18 +51,31 @@
 }
 
 :root {
+  /* Colors */
   --globalBgColor: hsl(0, 0%, 100%); /* #FFF */
   --globalTextColor: hsl(0, 0%, 56%); /* #8E8E8E */
   --globalTextDarkerColor: hsl(0, 0%, 36%); /* #5B5B5B */
   --globalTextLighterColor: hsl(0, 0%, 79%); /* C9C9C9 */
   --globalContrastColor: hsl(0, 0%, 20%); /* #343434 */
+
+  /* Typography */
+  --globalFontFamily: Archivo, Roboto, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  --globalHeadingFontFamily: "Space Grotesk", Roboto, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Oxygen, Ubuntu, Cantarell, "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  --globalFontSize: 14px;
 }
 
 body {
   margin: 0;
-  font-family: Archivo, Roboto, -apple-system, BlinkMacSystemFont, Segoe UI,
-    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Archivo, Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  font-family: var(--globalFontFamily);
   font-size: 14px;
+  font-size: var(--globalFontSize);
   line-height: 1.5;
   color: #8e8e8e;
   color: var(--globalTextColor);
@@ -75,8 +88,9 @@ h4,
 h5,
 h6 {
   font-family: "Space Grotesk", Roboto, -apple-system, BlinkMacSystemFont,
-    Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-    sans-serif;
+    "Segoe UI", Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  font-family: var(--globalHeadingFontFamily);
   margin: 0 0 0.5em 0;
   font-weight: 700;
   line-height: 1.2;
