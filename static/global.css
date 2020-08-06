@@ -50,13 +50,21 @@
   font-display: auto;
 }
 
+:root {
+  --bgColor: hsl(0, 0%, 100%);
+  --textColor: hsl(0, 0%, 56%);
+  --textDarkerColor: hsl(0, 0%, 36%);
+  --textLighterColor: hsl(0, 0%, 79%);
+  --contrastColor: hsl(0, 0%, 20%);
+}
+
 body {
   margin: 0;
   font-family: Archivo, Roboto, -apple-system, BlinkMacSystemFont, Segoe UI,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-size: 14px;
   line-height: 1.5;
-  color: #333;
+  color: var(--textColor);
 }
 
 h1,
@@ -78,14 +86,14 @@ h1 {
 }
 
 a {
-  color: inherit;
+  color: var(--textDarkerColor);
 }
 
 code {
   font-family: menlo, inconsolata, monospace;
   font-size: calc(1em - 2px);
-  color: #555;
-  background-color: #f0f0f0;
+  color: var(--textLighterColor);
+  background-color: var(--contrastColor);
   padding: 0.2em 0.4em;
   border-radius: 2px;
 }

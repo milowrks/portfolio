@@ -27,4 +27,11 @@
 
 <h1>Milo Zheng</h1>
 
-<p>Front-end engineer in Melbourne, Australia.</p>
+<p>
+  Front-end engineer in
+  <a href="https://en.wikipedia.org/wiki/Melbourne" rel="noreferer noopener">
+    Melbourne, Australia.
+  </a>
+</p>
+
+<code>var greeting = "Hello"</code>
