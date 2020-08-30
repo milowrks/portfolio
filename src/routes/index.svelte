@@ -15,9 +15,9 @@
   }
 
   .accent {
-    background-color: var(--accentColor);
-    border: 2px solid var(--accentColor);
-    color: var(--textDarkerColor);
+    background-color: var(--accent-color);
+    border: 2px solid var(--accent-color);
+    color: var(--darker-color);
   }
 
   @media (min-width: 480px) {
