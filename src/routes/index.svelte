@@ -14,6 +14,12 @@
     margin: 1em auto;
   }
 
+  .accent {
+    background-color: var(--accentColor);
+    border: 2px solid var(--accentColor);
+    color: var(--textDarkerColor);
+  }
+
   @media (min-width: 480px) {
     h1 {
       font-size: 4em;
@@ -33,5 +39,7 @@
     Melbourne, Australia.
   </a>
 </p>
+
+<p class="accent">Accent Colour</p>
 
 <code>var greeting = "Hello"</code>
