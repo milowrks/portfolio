@@ -71,7 +71,7 @@
   /* Layout */
   --grid-columns: 12;
   --grid-width-default: 0;
-  --grid-gutter: 8px;
+  --grid-gutter: 0.5rem;
 }
 
 @media (min-width: 768px) {
