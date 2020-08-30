@@ -67,6 +67,10 @@
   --heading-font-family: "Space Grotesk", Roboto, -apple-system,
     BlinkMacSystemFont, "Segoe UI", Oxygen, Ubuntu, Cantarell, "Fira Sans",
     "Droid Sans", "Helvetica Neue", sans-serif;
+
+  --grid-columns: 12;
+  --grid-width-default: 0;
+  --grid-gutter: 8px;
 }
 
 @media (min-width: 768px) {
@@ -79,6 +83,10 @@
   :root {
     --body-font-size: 18px;
   }
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
@@ -139,14 +147,19 @@ code {
 .row {
   display: flex;
   flex-wrap: wrap;
+  margin: 0 calc(0 - var(--grid-gutter));
 }
 
 .col {
-  --columns: 12; /* Number of columns in the grid system */
-  --width-default: 0; /* Default width, makes it flexible */
+  --columns: var(--grid-columns, 12); /* Number of columns in the grid system */
+  --width-default: var(
+    --grid-width-default,
+    0
+  ); /* Default width, makes it flexible */
   --width: var(--width-sm, var(--width-default));
   /* Width of the element */
-
+  /* border: 1px solid red; */
+  padding: 0 var(--grid-gutter);
   flex-basis: calc(var(--width) / var(--columns) * 100%);
 }
 

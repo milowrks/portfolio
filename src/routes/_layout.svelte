@@ -9,9 +9,6 @@
     --width-sm: 12;
   }
 
-  .content {
-    --width-sm: 12;
-  }
   .footer {
     --width-sm: 12;
   }
@@ -43,10 +40,8 @@
       </h2>
     </div>
   </header>
-  <main class="row">
-    <div class="content col">
-      <slot />
-    </div>
+  <main>
+    <slot />
   </main>
   <footer class="footer row">
     <Nav {segment} />
