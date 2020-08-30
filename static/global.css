@@ -60,13 +60,13 @@
   --accentColor: hsl(75, 100%, 50%); /* #BFFF00 */
 
   /* Typography */
-  --globalFontFamily: Archivo, Roboto, -apple-system, BlinkMacSystemFont,
+  --bodyFontFamily: Archivo, Roboto, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans",
     "Helvetica Neue", sans-serif;
-  --globalHeadingFontFamily: "Space Grotesk", Roboto, -apple-system,
+  --bodyFontSize: 14px;
+  --headingFontFamily: "Space Grotesk", Roboto, -apple-system,
     BlinkMacSystemFont, "Segoe UI", Oxygen, Ubuntu, Cantarell, "Fira Sans",
     "Droid Sans", "Helvetica Neue", sans-serif;
-  --globalFontSize: 14px;
 }
 
 body {
@@ -74,9 +74,9 @@ body {
   font-family: Archivo, Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
-  font-family: var(--globalFontFamily);
+  font-family: var(--bodyFontFamily);
   font-size: 14px;
-  font-size: var(--globalFontSize);
+  font-size: var(--bodyFontSize);
   line-height: 1.5;
   color: #8e8e8e;
   color: var(--primaryColor);
@@ -91,7 +91,7 @@ h6 {
   font-family: "Space Grotesk", Roboto, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans",
     "Helvetica Neue", sans-serif;
-  font-family: var(--globalHeadingFontFamily);
+  font-family: var(--headingFontFamily);
   margin: 0 0 0.5em 0;
   font-weight: 700;
   line-height: 1.2;
