@@ -11,30 +11,44 @@
 
   .content {
     --width-sm: 12;
-    --width-md: 8; /* Tablet and larger */
   }
-
-  .sidebar {
+  .footer {
     --width-sm: 12;
-    --width-md: 4; /* Tablet and larger */
   }
 
   main {
-    /* position: relative; */
-    /* max-width: 56em; */
-    /* background-color: white; */
-    /* padding: 2em; */
-    /* margin: 0 auto; */
-    box-sizing: border-box;
+    flex: 1;
+    position: relative;
+  }
+
+  h1 {
+    font-size: 2.8em;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 4em;
+    }
   }
 </style>
 
-<div class="row">
-  <header class="header col">
-    <Nav {segment} />
+<div class="site">
+  <header class="row">
+    <div class="header col">
+      <h1>Milo Zheng</h1>
+      <h2>
+        web
+        <em>developer</em>
+      </h2>
+    </div>
   </header>
-  <main class="content col">
-    <slot />
+  <main class="row">
+    <div class="content col">
+      <slot />
+    </div>
   </main>
-  <aside class="sidebar col">sidebar</aside>
+  <footer class="footer row">
+    <Nav {segment} />
+  </footer>
 </div>
