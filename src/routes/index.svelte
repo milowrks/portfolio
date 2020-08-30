@@ -3,15 +3,16 @@
     margin: 1em auto;
   }
 
-  .content {
+  .bio {
     --width-sm: 12;
-    --width-md: 8;
+    --width-md: 6;
   }
 
-  .code {
-    --width-sm: 12;
-    --width-md: 4;
+  .bio span {
+    background-color: var(--dark-color);
+    border: 2px solid var(--dark-color);
   }
+
   .accent {
     background-color: var(--accent-color);
     border: 2px solid var(--accent-color);
@@ -24,7 +25,9 @@
 </svelte:head>
 
 <div class="row">
-  <div class="content col">
+  <div class="bio col">
+    <span>🏗</span>
+    <code class="accent">PORTFOLIO COMING SOON</code>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
       sollicitudin ullamcorper leo et convallis.
@@ -37,10 +40,5 @@
       Maecenas a eros rutrum, viverra nulla vel, venenatis arcu. Nam eleifend
       egestas nisi, eget hendrerit ligula rutrum a.
     </p>
-
-    <p class="accent">Accent Colour</p>
-  </div>
-  <div class="code col">
-    <code>A CODE BLOCK</code>
   </div>
 </div>

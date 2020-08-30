@@ -68,6 +68,7 @@
     BlinkMacSystemFont, "Segoe UI", Oxygen, Ubuntu, Cantarell, "Fira Sans",
     "Droid Sans", "Helvetica Neue", sans-serif;
 
+  /* Layout */
   --grid-columns: 12;
   --grid-width-default: 0;
   --grid-gutter: 8px;
@@ -156,9 +157,7 @@ code {
     --grid-width-default,
     0
   ); /* Default width, makes it flexible */
-  --width: var(--width-sm, var(--width-default));
-  /* Width of the element */
-  /* border: 1px solid red; */
+  --width: var(--width-sm, var(--width-default)); /* Width of the element */
   padding: 0 var(--grid-gutter);
   flex-basis: calc(var(--width) / var(--columns) * 100%);
 }
