@@ -7,6 +7,7 @@
 <style>
   .header {
     --width-sm: 12;
+    --push-sm: 1;
   }
 
   .footer {

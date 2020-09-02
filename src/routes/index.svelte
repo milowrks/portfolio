@@ -6,6 +6,7 @@
   .bio {
     --width-sm: 12;
     --width-md: 6;
+    --push-sm: 1;
   }
 
   .bio span {

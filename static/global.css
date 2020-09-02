@@ -70,8 +70,9 @@
 
   /* Layout */
   --grid-columns: 12;
-  --grid-width-default: 0;
   --grid-gutter: 0.5rem;
+  --grid-push-default: 0;
+  --grid-width-default: 0;
 }
 
 @media (min-width: 768px) {
@@ -153,13 +154,13 @@ code {
 
 .col {
   --columns: var(--grid-columns, 12); /* Number of columns in the grid system */
-  --width-default: var(
-    --grid-width-default,
-    0
-  ); /* Default width, makes it flexible */
+  --push-default: var(--grid-push-default, 0);
+  --width-default: var(--grid-width-default, 0);
   --width: var(--width-sm, var(--width-default)); /* Width of the element */
-  padding: 0 var(--grid-gutter);
+  --push: var(--push-sm, var(--push-default));
   flex-basis: calc(var(--width) / var(--columns) * 100%);
+  margin-left: calc(var(--push) / var(--columns) * 100%);
+  padding: 0 var(--grid-gutter);
 }
 
 @media (min-width: 768px) {
@@ -167,6 +168,7 @@ code {
     --width: var(--width-md, var(--width-sm, var(--width-default)));
     /* Width of the element on tablet and up with chaining fallbacks */
     /* for elements without wider breakpoint declarations */
+    --push: var(--push-md, var(--push-sm, var(--push-default)));
   }
 }
 
@@ -176,5 +178,6 @@ code {
       --width-lg,
       var(--width-md, var(--width-sm, var(--width-default)))
     );
+    --push: var(--push-lg, var(--push-md, var(--push-sm, var(--push-default))));
   }
 }
