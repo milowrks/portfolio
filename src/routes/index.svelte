@@ -28,7 +28,7 @@
 <div class="row">
   <div class="bio col">
     <span>🏗</span>
-    <code class="accent">PORTFOLIO COMING SOON</code>
+    <code class="accent">COMING SOON</code>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
       sollicitudin ullamcorper leo et convallis.
