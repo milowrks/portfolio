@@ -1,31 +1,45 @@
 <style>
-	h1, p {
-		text-align: center;
-		margin: 0 auto;
-	}
+  p {
+    margin: 1em auto;
+  }
 
-	h1 {
-		font-size: 2.8em;
-		text-transform: uppercase;
-		font-weight: 700;
-		margin: 0 0 0.5em 0;
-	}
+  .bio {
+    --width-sm: 12;
+    --width-md: 6;
+    --push-sm: 1;
+  }
 
-	p {
-		margin: 1em auto;
-	}
+  .bio span {
+    background-color: var(--dark-color);
+    border: 2px solid var(--dark-color);
+  }
 
-	@media (min-width: 480px) {
-		h1 {
-			font-size: 4em;
-		}
-	}
+  .accent {
+    background-color: var(--accent-color);
+    border: 2px solid var(--accent-color);
+    color: var(--darker-color);
+  }
 </style>
 
 <svelte:head>
-	<title>milo.works</title>
+  <title>Milo Zheng | Web Developer</title>
 </svelte:head>
 
-<h1>Milo Zheng</h1>
+<div class="row">
+  <div class="bio col">
+    <span>🏗</span>
+    <code class="accent">COMING SOON</code>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+      sollicitudin ullamcorper leo et convallis.
+    </p>
 
-<p><strong>Front-end engineer in Melbourne, Australia.</strong></p>
+    <p>
+      Integer id neque sit amet diam rhoncus ullamcorper. Praesent vestibulum
+      maximus quam, sit amet gravida dolor euismod at. Aliquam pharetra porta
+      tortor, in sodales ante hendrerit pharetra. Suspendisse et blandit mi.
+      Maecenas a eros rutrum, viverra nulla vel, venenatis arcu. Nam eleifend
+      egestas nisi, eget hendrerit ligula rutrum a.
+    </p>
+  </div>
+</div>

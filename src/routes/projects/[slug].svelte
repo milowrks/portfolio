@@ -1,24 +1,28 @@
 <script context="module">
-	export async function preload({ params, query }) {
-		// the `slug` parameter is available because
-		// this file is called [slug].svelte
-		const res = await this.fetch(`projects/${params.slug}.json`);
-		const data = await res.json();
+  export async function preload({ params, query }) {
+    // the `slug` parameter is available because
+    // this file is called [slug].svelte
+    const res = await this.fetch(`projects/${params.slug}.json`);
+    const data = await res.json();
 
-		if (res.status === 200) {
-			return { project: data };
-		} else {
-			this.error(res.status, data.message);
-		}
-	}
+    if (res.status === 200) {
+      return { project: data };
+    } else {
+      this.error(res.status, data.message);
+    }
+  }
 </script>
 
 <script>
-	export let project;
+  export let project;
 </script>
 
 <style>
-	/*
+  .title {
+    --width-sm: 12;
+    --push-sm: 1;
+  }
+  /*
 		By default, CSS is locally scoped to the component,
 		and any unused styles are dead-code-eliminated.
 		In this page, Svelte can't know which elements are
@@ -26,39 +30,50 @@
 		so we have to use the :global(...) modifier to target
 		all elements inside .content
 	*/
-	.content :global(h2) {
-		font-size: 1.4em;
-		font-weight: 500;
-	}
 
-	.content :global(pre) {
-		background-color: #f9f9f9;
-		box-shadow: inset 1px 1px 5px rgba(0,0,0,0.05);
-		padding: 0.5em;
-		border-radius: 2px;
-		overflow-x: auto;
-	}
+  .content {
+    --width-sm: 12;
+    --push-sm: 1;
+  }
+  .content :global(h2) {
+    font-size: 1.4em;
+    font-weight: 500;
+  }
 
-	.content :global(pre) :global(code) {
-		background-color: transparent;
-		padding: 0;
-	}
+  .content :global(pre) {
+    background-color: #f9f9f9;
+    box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.05);
+    padding: 0.5em;
+    border-radius: 2px;
+    overflow-x: auto;
+  }
 
-	.content :global(ul) {
-		line-height: 1.5;
-	}
+  .content :global(pre) :global(code) {
+    background-color: transparent;
+    padding: 0;
+  }
 
-	.content :global(li) {
-		margin: 0 0 0.5em 0;
-	}
+  .content :global(ul) {
+    line-height: 1.5;
+  }
+
+  .content :global(li) {
+    margin: 0 0 0.5em 0;
+  }
 </style>
 
 <svelte:head>
-	<title>{project.title}</title>
+  <title>{project.title}</title>
 </svelte:head>
 
-<h1>{project.title}</h1>
+<div class="row">
+  <div class="col title">
+    <h1>{project.title}</h1>
+  </div>
+</div>
 
-<div class='content'>
-	{@html project.html}
+<div class="row">
+  <div class="col content">
+    {@html project.html}
+  </div>
 </div>
